@@ -1,0 +1,56 @@
+.patasxan {
+    background-color: #bfbfbf;
+    margin: 0 auto;
+    width: 43px;
+    height: 42px;
+    border-radius: 50% 50%;
+    border: 1px solid;
+}
+
+.patasxan p {
+    font-size: 30px;
+    margin: 0;
+    text-align: center;
+    color: red;
+}
+
+.text {
+    margin: 0 auto;
+    border: 2px solid;
+    width: 350px;
+    height: 120px;
+    margin-top: 0px;
+}
+
+.p,
+h2 {
+    text-align: center;
+}
+
+.karmir {
+    color: red;
+}
+
+.kapuyt {
+    font-size: 250%;
+    color: blue;
+}
+
+.pat {
+    position: fixed;
+    z-index: 1;
+    margin-top: 312px;
+}
+
+.muk {
+    width: 200px;
+    height: 200px;
+    position: absolute;
+    top: 450px;
+    left: 41%;
+    visibility: hidden;
+}
+
+.muk1 {
+    visibility: inherit;
+}
