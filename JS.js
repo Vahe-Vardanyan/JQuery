@@ -10,9 +10,10 @@ $(document).ready(function () {
             $(".text").css({
                 "margin-top": time + "px"
             });
-            if(time < 190){
+            if (time < 190) {
                 time += 10;
-            }else{
+            }
+            else {
                 clearInterval(interval);
                 $(".h2").html("Game Over");
                 $(".p").html("");
@@ -21,6 +22,7 @@ $(document).ready(function () {
             }
         }, t)
         log(t)
+
         function randomWorb() {
             const arr2 = [];
             for (let i = 0; i < 6; i++) {
