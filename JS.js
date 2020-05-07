@@ -4,30 +4,34 @@ $(document).ready(function () {
     let result = 0;
     let t = 1000;
     let arr1 = "absdefghjklmnopqrstuwzxy";
-    let interval = setInterval(function () {
-        $(".text").css({
-            "margin-top": time + "px"
-        });
-        time += 10;
-        $("#time").html(time)
-        if (time == 200) {
-            clearInterval(interval);
-            $(".h2").html("Game Over");
-            $("#h2").addClass("kapuyt");
-            $("#muk").addClass("muk1");
-            $(".p").html("");
-        }
-    }, t)
 
-    function randomWorb() {
-        const arr2 = [];
-        for (let i = 0; i < 6; i++) {
-            let rand = Math.round(Math.random() * 24)
-            arr2.push(arr1[rand]);
+    function tim() {
+        let interval = setInterval(function () {
+            $(".text").css({
+                "margin-top": time + "px"
+            });
+            if(time < 190){
+                time += 10;
+            }else{
+                clearInterval(interval);
+                $(".h2").html("Game Over");
+                $(".p").html("");
+                $("#h2").addClass("kapuyt");
+                $("#muk").addClass("muk1");
+            }
+        }, t)
+        log(t)
+        function randomWorb() {
+            const arr2 = [];
+            for (let i = 0; i < 6; i++) {
+                let rand = Math.round(Math.random() * 24)
+                arr2.push(arr1[rand]);
+            }
+            $(".h2").html(arr2)
         }
-        $(".h2").html(arr2)
+        randomWorb();
     }
-    randomWorb();
+    tim();
     $("body").keydown(function (e) {
         let text = $(".p:last-child").html();
         if (e.key == "Escape") {
@@ -44,7 +48,7 @@ $(document).ready(function () {
                 $(".p").removeClass("karmir");
                 time = 0;
                 t = t - 200;
-                return randomWorb();
+                return tim();
             }
             else {
                 $(".p").addClass("karmir");
