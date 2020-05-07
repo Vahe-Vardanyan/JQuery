@@ -20,6 +20,7 @@ $(document).ready(function () {
                 $("#h2").addClass("kapuyt");
                 $("#muk").addClass("muk1");
             }
+
         }, t)
         log(t)
 
